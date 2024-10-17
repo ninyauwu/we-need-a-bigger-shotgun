@@ -5,9 +5,9 @@ using UnityEngine;
 public class PickUp : MonoBehaviour
 {
     [SerializeField]
-    private GameObject item;
+    private GameObject _item;
     [SerializeField]
-    private Transform visual;
+    private Transform _visual;
 
     private void Start()
     {
@@ -18,8 +18,8 @@ public class PickUp : MonoBehaviour
     {
         while (true)
         {
-            visual.Rotate(Vector3.up, 60 * Time.deltaTime, Space.World);
-            visual.localPosition = new Vector3(0, 5 + Mathf.Sin(Time.time) * 0.5f, 0);
+            _visual.Rotate(Vector3.up, 60 * Time.deltaTime, Space.World);
+            _visual.localPosition = new Vector3(0, 5 + Mathf.Sin(Time.time) * 0.5f, 0);
             yield return null;
         }
     }
@@ -29,7 +29,7 @@ public class PickUp : MonoBehaviour
         if (other.gameObject.TryGetComponent(out PlayerController player))
         {
             // Assign item to player
-            Debug.Log($"picked up {item}");
+            Debug.Log($"picked up {_item}");
 
             // Can also create an absract item class Item and
             // make seperate pickups with their own effect when you pick them up
