@@ -24,15 +24,16 @@ public class PickUp : MonoBehaviour
         }
     }
 
+    private void OnPickUp(PlayerController player)
+    {
+        // Assign item to player
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.TryGetComponent(out PlayerController player))
         {
-            // Assign item to player
-            Debug.Log($"picked up {_item}");
-
-            // Can also create an absract item class Item and
-            // make seperate pickups with their own effect when you pick them up
+            OnPickUp(player);
         }
     }
 }
