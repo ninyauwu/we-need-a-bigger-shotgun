@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class Recoil : MonoBehaviour
@@ -31,7 +32,7 @@ public class Recoil : MonoBehaviour
 
         playerModel.transform.rotation = Quaternion.Euler(0, cameraFollowTarget.transform.rotation.eulerAngles.y, 0);
         Quaternion lookRotation = Quaternion.LookRotation((mainCamera.position + mainCamera.forward * 10.0f) - playerSpine.position);
-        playerSpine.rotation = lookRotation;
+        playerSpine.rotation = math.slerp(playerSpine.rotation, lookRotation, 1.0f);
     }
 
     
