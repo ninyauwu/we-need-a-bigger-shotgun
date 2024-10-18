@@ -14,6 +14,8 @@ public class Shotgun : MonoBehaviour
     public AudioClip shotgunShot;
     public AudioClip shotgunReload;
 
+    public GameObject ShotgunReloadVFX;
+
 
     private Timer _reloadTimer = new Timer();
 
@@ -35,11 +37,28 @@ public class Shotgun : MonoBehaviour
     }
 
     private void Shoot(){
+<<<<<<< Updated upstream
             playerRigidbody.GetComponent<Rigidbody>().AddExplosionForce(explosionForce, explosionPosition.position, explosionRadius);
             _reloadTimer.Start(reloadTime);
             //No indicator of shooting so
             SoundEffectManager.Instance.PlaySound(shotgunShot, explosionPosition, 1.0f);
             SoundEffectManager.Instance.PlaySoundNoPitchDelayed(shotgunReload, explosionPosition, 1.0f, 1.0f);
             Debug.Log("Shot");
+=======
+            PlayerRigidbody.GetComponent<Rigidbody>().AddExplosionForce(ExplosionForce, ExplosionPosition.position, ExplosionRadius);
+            _reloadTimer.Start(ReloadTime);
+            SoundEffectManager.Instance.PlaySound(ShotgunShot, ExplosionPosition, 1.0f);
+            SoundEffectManager.Instance.PlaySoundNoPitchDelayed(ShotgunReload, ExplosionPosition, 1.0f, 1.0f);
+            StartCoroutine(SpawnEffectAfterDelay(ShotgunReloadVFX, ExplosionPosition, 1.0f, 2.0f));
+    }
+
+
+    //TODO make a vfx manage class and put this inside.
+    private IEnumerator SpawnEffectAfterDelay(GameObject effect, Transform position, float delay, float destroyDelay){
+        yield return new WaitForSeconds(delay);
+        GameObject vfx_effect = Instantiate(effect, ExplosionPosition);
+        vfx_effect.GetComponent<ParticleSystem>().Play();
+        Destroy(vfx_effect, destroyDelay);
+>>>>>>> Stashed changes
     }
 }

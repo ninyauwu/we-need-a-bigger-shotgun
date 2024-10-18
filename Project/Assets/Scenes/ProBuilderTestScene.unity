@@ -297,6 +297,12 @@ MonoBehaviour:
   volumeMultiplier: 0.01
   soundEffectObject: {fileID: 8349468522717782482, guid: 7ec8d5b8c25351641b99b6fc1f3af4d8,
     type: 3}
+--- !u!4 &552854811 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2545557389485610500, guid: 8bfa6ed145c4e5d43a098e35e0e77cf9,
+    type: 3}
+  m_PrefabInstance: {fileID: 222675333554054194}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &643878582
 GameObject:
   m_ObjectHideFlags: 3
@@ -7400,6 +7406,12 @@ Transform:
   - {fileID: 643878583}
   m_Father: {fileID: 2021696969}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &806365067 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2812005528466689498, guid: 8bfa6ed145c4e5d43a098e35e0e77cf9,
+    type: 3}
+  m_PrefabInstance: {fileID: 222675333554054194}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1108277682
 GameObject:
   m_ObjectHideFlags: 0
@@ -8389,16 +8401,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 318738431448019520, guid: 8bfa6ed145c4e5d43a098e35e0e77cf9,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 318738431448019520, guid: 8bfa6ed145c4e5d43a098e35e0e77cf9,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 318738431448019520, guid: 8bfa6ed145c4e5d43a098e35e0e77cf9,
+        type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2837784180231108399, guid: 8bfa6ed145c4e5d43a098e35e0e77cf9,
         type: 3}
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 1884892309}
-    - target: {fileID: 3164980418905253227, guid: 8bfa6ed145c4e5d43a098e35e0e77cf9,
-        type: 3}
-      propertyPath: m_Interpolate
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3355232733475176219, guid: 8bfa6ed145c4e5d43a098e35e0e77cf9,
         type: 3}
       propertyPath: m_Name
@@ -8454,6 +8476,47 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7922734016075306319, guid: 8bfa6ed145c4e5d43a098e35e0e77cf9,
+        type: 3}
+      propertyPath: ReloadTime
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7922734016075306319, guid: 8bfa6ed145c4e5d43a098e35e0e77cf9,
+        type: 3}
+      propertyPath: ShotgunShot
+      value: 
+      objectReference: {fileID: 8300000, guid: dc0b8b10e23170b47bc9290424f25f96, type: 3}
+    - target: {fileID: 7922734016075306319, guid: 8bfa6ed145c4e5d43a098e35e0e77cf9,
+        type: 3}
+      propertyPath: ShotgunReload
+      value: 
+      objectReference: {fileID: 8300000, guid: 1b61701c74ace6e47b930653159fe9b7, type: 3}
+    - target: {fileID: 7922734016075306319, guid: 8bfa6ed145c4e5d43a098e35e0e77cf9,
+        type: 3}
+      propertyPath: ExplosionForce
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7922734016075306319, guid: 8bfa6ed145c4e5d43a098e35e0e77cf9,
+        type: 3}
+      propertyPath: ExplosionRadius
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7922734016075306319, guid: 8bfa6ed145c4e5d43a098e35e0e77cf9,
+        type: 3}
+      propertyPath: PlayerRigidbody
+      value: 
+      objectReference: {fileID: 806365067}
+    - target: {fileID: 7922734016075306319, guid: 8bfa6ed145c4e5d43a098e35e0e77cf9,
+        type: 3}
+      propertyPath: ShotgunReloadVFX
+      value: 
+      objectReference: {fileID: 1353141561521026605, guid: 34cbd754083b06c49b1e0036df2bd0d4,
+        type: 3}
+    - target: {fileID: 7922734016075306319, guid: 8bfa6ed145c4e5d43a098e35e0e77cf9,
+        type: 3}
+      propertyPath: ExplosionPosition
+      value: 
+      objectReference: {fileID: 552854811}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
