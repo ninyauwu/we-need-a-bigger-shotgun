@@ -4,32 +4,39 @@ using UnityEngine;
 
 public class ShootingEnemy : BasicEnemy
 {
-    public GameObject bullet;
-    public float attackSpeed = 1.5f;
+    public GameObject Bullet;
+    public float AttackSpeed = 1.5f;
 
     protected override void OnTriggerEnter(Collider other)
     {
-        base.OnTriggerEnter(other); // Inherit base behavior if needed
-
-        if (other.name == "EnemyShootCollider")
+        PlayerController playerController;
+        if (other.TryGetComponent<PlayerController>(out playerController))
         {
             _agent.speed = 0;
             _agent.velocity = Vector3.zero;
-            InvokeRepeating("Shoot", 0.5f, attackSpeed);
+            InvokeRepeating("Shoot", 0.01f, AttackSpeed);
         }
     }
 
     protected override void OnTriggerExit(Collider other)
     {
-        base.OnTriggerExit(other); // Reset base behavior
-
+        PlayerController playerController;
+        if (other.TryGetComponent<PlayerController>(out playerController))
+        {
+            base.OnTriggerExit(other); // Reset base behavior
         CancelInvoke("Shoot");
+
+        }
+
     }
 
-    public void Shoot()
+    /// <summary>
+    /// Shoots a bullet towards the player.
+    /// </summary>
+    private void Shoot()
     {
-        transform.LookAt(player.transform);
-        GameObject shootBullet = Instantiate(bullet, new Vector3(0, 0.5f, 0.7f), Quaternion.Euler(0, -90, 0));
+        transform.LookAt(Player.transform);
+        GameObject shootBullet = Instantiate(Bullet, new Vector3(0, 0.5f, 0.7f), Quaternion.Euler(0, -90, 0));
         shootBullet.transform.SetParent(this.transform, false);
         shootBullet.GetComponent<Rigidbody>().velocity = transform.forward * 25f;
         Destroy(shootBullet, 3f);

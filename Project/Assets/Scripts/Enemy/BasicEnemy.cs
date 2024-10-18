@@ -6,20 +6,19 @@ using UnityEngine.AI;
 
 public class BasicEnemy : MonoBehaviour
 {
-    public GameObject player;
+    public GameObject Player;
     protected NavMeshAgent _agent;
 
-    public int health;
-    public float speed;
+    public float Speed;
     private float _speedSave;
-    public float acceleration;
+    public float Acceleration;
 
     protected virtual void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
-        _agent.speed = speed;
-        _agent.acceleration = acceleration;
-        _speedSave = speed;
+        _agent.speed = Speed;
+        _agent.acceleration = Acceleration;
+        _speedSave = Speed;
     }
 
     protected virtual void Update()
@@ -27,12 +26,18 @@ public class BasicEnemy : MonoBehaviour
         MoveToPlayer();
     }
 
+    /// <summary>
+    /// Moves the enemy towards the player.
+    /// </summary>
     protected void MoveToPlayer()
     {
-        _agent.SetDestination(player.transform.position);
+        _agent.SetDestination(Player.transform.position);
     }
 
-    public virtual void Death()
+    /// <summary>
+    /// Handles the enemy's death behavior.
+    /// </summary>
+    protected virtual void Death()
     {
         // Implement enemy death behavior (generic)
         Debug.Log("Enemy died");
