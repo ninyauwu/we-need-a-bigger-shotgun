@@ -856,10 +856,10 @@ MonoBehaviour:
   playerModel: {fileID: 2812005528466689498}
   cameraFollowTarget: {fileID: 1121177516928423010}
   mainCamera: {fileID: 6898324268392400794}
-  playerShoulder: {fileID: 3004549175169620682}
-  explosionForce: 100
-  explosionRadius: 5
-  cube: {fileID: 0}
+  playerSpine: {fileID: 5474479405501035403}
+  explosionForce: 1000
+  explosionRadius: 3
+  reloadTime: 2
 --- !u!1 &3456760975610943301
 GameObject:
   m_ObjectHideFlags: 0
@@ -1639,8 +1639,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8433982522697714210}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.37023315, y: 0, z: 0, w: 0.9289389}
-  m_LocalPosition: {x: -0.003, y: 0.0013892581, z: 0.00018585865}
+  m_LocalRotation: {x: 0.8895052, y: 0.043730825, z: -0.08713841, w: 0.4464024}
+  m_LocalPosition: {x: -0.003, y: 0.0013892581, z: -0.001}
   m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1648,7 +1648,7 @@ Transform:
   - {fileID: 2843567003703546672}
   - {fileID: 5394678850702592448}
   m_Father: {fileID: 1428860095765612494}
-  m_LocalEulerAnglesHint: {x: 43.46, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 126.7, y: 11.19, z: 0}
 --- !u!1 &8548428044083065057
 GameObject:
   m_ObjectHideFlags: 0
