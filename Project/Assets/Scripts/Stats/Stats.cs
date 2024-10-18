@@ -8,6 +8,10 @@ public class Stats : ScriptableObject
     public float Attack;
     public float Speed;
 
+    /// <summary>
+    /// Clone the stats so that the ScriptableObject doesn't get modified
+    /// </summary>
+    /// <returns></returns>
     public Stats Clone()
     {
         Stats clone = Instantiate(this);

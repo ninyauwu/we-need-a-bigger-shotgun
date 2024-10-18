@@ -19,6 +19,10 @@ public class Health : MonoBehaviour
         _currentHealth = _maxHealth;
     }
 
+    /// <summary>
+    /// Heal the entity
+    /// </summary>
+    /// <param name="healingAmount"></param>
     public void Heal(float healingAmount)
     {
         _currentHealth += healingAmount;
@@ -26,6 +30,10 @@ public class Health : MonoBehaviour
         if (_currentHealth >= _maxHealth) _currentHealth = _maxHealth;
     }
 
+    /// <summary>
+    /// Deal damage to the entity
+    /// </summary>
+    /// <param name="damageAmount"></param>
     public void TakeDamage(float damageAmount)
     {
         _currentHealth -= damageAmount;
