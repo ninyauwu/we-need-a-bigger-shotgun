@@ -5,14 +5,14 @@ using UnityEngine;
 
 public class Shotgun : MonoBehaviour
 {
-    public Transform explosionPosition;
-    public Transform playerRigidbody;
-    public int explosionForce = 0;
-    public int explosionRadius = 0;
-    public float reloadTime = 0.0f;
+    public Transform ExplosionPosition;
+    public Transform PlayerRigidbody;
+    public int ExplosionForce = 0;
+    public int ExplosionRadius = 0;
+    public float ReloadTime = 0.0f;
 
-    public AudioClip shotgunShot;
-    public AudioClip shotgunReload;
+    public AudioClip ShotgunShot;
+    public AudioClip ShotgunReload;
 
     public GameObject ShotgunReloadVFX;
 
@@ -37,14 +37,6 @@ public class Shotgun : MonoBehaviour
     }
 
     private void Shoot(){
-<<<<<<< Updated upstream
-            playerRigidbody.GetComponent<Rigidbody>().AddExplosionForce(explosionForce, explosionPosition.position, explosionRadius);
-            _reloadTimer.Start(reloadTime);
-            //No indicator of shooting so
-            SoundEffectManager.Instance.PlaySound(shotgunShot, explosionPosition, 1.0f);
-            SoundEffectManager.Instance.PlaySoundNoPitchDelayed(shotgunReload, explosionPosition, 1.0f, 1.0f);
-            Debug.Log("Shot");
-=======
             PlayerRigidbody.GetComponent<Rigidbody>().AddExplosionForce(ExplosionForce, ExplosionPosition.position, ExplosionRadius);
             _reloadTimer.Start(ReloadTime);
             SoundEffectManager.Instance.PlaySound(ShotgunShot, ExplosionPosition, 1.0f);
@@ -59,6 +51,5 @@ public class Shotgun : MonoBehaviour
         GameObject vfx_effect = Instantiate(effect, ExplosionPosition);
         vfx_effect.GetComponent<ParticleSystem>().Play();
         Destroy(vfx_effect, destroyDelay);
->>>>>>> Stashed changes
     }
 }
