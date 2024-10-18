@@ -22,7 +22,7 @@ public class Health : MonoBehaviour
     /// <summary>
     /// Heal the entity
     /// </summary>
-    /// <param name="healingAmount"></param>
+    /// <param name="healingAmount">Amount of health that gets healed</param>
     public void Heal(float healingAmount)
     {
         _currentHealth += healingAmount;
@@ -33,7 +33,7 @@ public class Health : MonoBehaviour
     /// <summary>
     /// Deal damage to the entity
     /// </summary>
-    /// <param name="damageAmount"></param>
+    /// <param name="damageAmount">Amount of damage that has to be dealt</param>
     public void TakeDamage(float damageAmount)
     {
         _currentHealth -= damageAmount;
