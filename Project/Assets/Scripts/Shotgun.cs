@@ -5,14 +5,14 @@ using UnityEngine;
 
 public class Shotgun : MonoBehaviour
 {
-    public Transform explosionPosition;
-    public Transform playerRigidbody;
-    public int explosionForce = 0;
-    public int explosionRadius = 0;
-    public float reloadTime = 0.0f;
+    public Transform ExplosionPosition;
+    public Transform PlayerRigidbody;
+    public int ExplosionForce = 0;
+    public int ExplosionRadius = 0;
+    public float ReloadTime = 0.0f;
 
-    public AudioClip shotgunShot;
-    public AudioClip shotgunReload;
+    public AudioClip ShotgunShot;
+    public AudioClip ShotgunReload;
 
 
     private Timer _reloadTimer = new Timer();
@@ -35,11 +35,11 @@ public class Shotgun : MonoBehaviour
     }
 
     private void Shoot(){
-            playerRigidbody.GetComponent<Rigidbody>().AddExplosionForce(explosionForce, explosionPosition.position, explosionRadius);
-            _reloadTimer.Start(reloadTime);
+            PlayerRigidbody.GetComponent<Rigidbody>().AddExplosionForce(ExplosionForce, ExplosionPosition.position, ExplosionRadius);
+            _reloadTimer.Start(ReloadTime);
+            SoundEffectManager.Instance.PlaySound(ShotgunShot, ExplosionPosition, 1.0f);
+            SoundEffectManager.Instance.PlaySoundNoPitchDelayed(ShotgunReload, ExplosionPosition, 1.0f, 1.0f);
             //No indicator of shooting so
-            SoundEffectManager.Instance.PlaySound(shotgunShot, explosionPosition, 1.0f);
-            SoundEffectManager.Instance.PlaySoundNoPitchDelayed(shotgunReload, explosionPosition, 1.0f, 1.0f);
             Debug.Log("Shot");
     }
 }
