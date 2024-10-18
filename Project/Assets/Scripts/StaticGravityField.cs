@@ -23,7 +23,7 @@ public class StaticGravityField : MonoBehaviour
     public GravityMode Mode;
 
     [Tooltip("Facing Direction of the gravity field. Uses the XYZ indicator in Unity's scene view (top right of the scene view) as reference for direction. \n\n(Towards-X would mean the gravity would face towards the red X arrow.)")]
-    public GravityDirection FacingDirection; //Use?
+    public GravityDirection FacingDirection = GravityDirection.from_Y; //Use?
 
     [Tooltip("Gravity strength, Defaults to 1G (9.80665)")]
     public float GravityStrength = 9.80665f;
@@ -54,7 +54,8 @@ public class StaticGravityField : MonoBehaviour
         }
         else
         {
-            _gravityForceDirection = new Vector3(0, -GravityStrength, 0);
+            
+            _gravityForceDirection = -transform.up;
         }
         
     }
