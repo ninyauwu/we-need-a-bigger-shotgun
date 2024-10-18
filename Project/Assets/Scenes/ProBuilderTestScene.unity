@@ -7477,13 +7477,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7922734016075306319, guid: 8bfa6ed145c4e5d43a098e35e0e77cf9,
         type: 3}
+      propertyPath: reloadTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7922734016075306319, guid: 8bfa6ed145c4e5d43a098e35e0e77cf9,
+        type: 3}
       propertyPath: playerSpine
       value: 
       objectReference: {fileID: 2012481637}
     - target: {fileID: 7922734016075306319, guid: 8bfa6ed145c4e5d43a098e35e0e77cf9,
         type: 3}
       propertyPath: explosionForce
-      value: 100
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 7922734016075306319, guid: 8bfa6ed145c4e5d43a098e35e0e77cf9,
         type: 3}
@@ -7493,7 +7498,7 @@ PrefabInstance:
     - target: {fileID: 7922734016075306319, guid: 8bfa6ed145c4e5d43a098e35e0e77cf9,
         type: 3}
       propertyPath: explosionRadius
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
