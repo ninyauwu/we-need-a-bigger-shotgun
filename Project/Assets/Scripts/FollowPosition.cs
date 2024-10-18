@@ -1,6 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class FollowPosition : MonoBehaviour
 {
@@ -15,6 +18,6 @@ public class FollowPosition : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.transform.position = playerTransform.transform.position + offset;
+        this.transform.position = Vector3.Lerp(this.transform.position, playerTransform.transform.position + offset, 0.9f);
     }
 }
