@@ -11,7 +11,7 @@ public class UIManager : MonoBehaviour
     /// <summary>
     /// Called whenever the on-screen pause button is pressed
     /// </summary>
-    public void openPauseMenu() {
+    public void OpenPauseMenu() {
         PauseMenu.SetActive(true);
         Time.timeScale = 0;
     }
@@ -19,7 +19,7 @@ public class UIManager : MonoBehaviour
     /// <summary>
     /// Called whenever the "Resume Game" button is pressed within the pause menu
     /// </summary>
-    public void closePauseMenu() {
+    public void ClosePauseMenu() {
         PauseMenu.SetActive(false);
         Time.timeScale = 1;
     }
@@ -27,7 +27,7 @@ public class UIManager : MonoBehaviour
     /// <summary>
     /// Called whenever the "Settings" button is pressed within the pause menu
     /// </summary>
-    public void openSettings() {
+    public void OpenSettings() {
         PauseMenu.SetActive(false);
         SettingsMenu.SetActive(true);
     }
@@ -35,7 +35,7 @@ public class UIManager : MonoBehaviour
     /// <summary>
     /// Called whenever the "Return" button is pressed within the settings menu
     /// </summary>
-    public void closeSettings() {
+    public void CloseSettings() {
         SettingsMenu.SetActive(false);
         PauseMenu.SetActive(true);
     }
@@ -43,7 +43,7 @@ public class UIManager : MonoBehaviour
     /// <summary>
     /// Called whenever the "Return to menu" button is pressed within the pause menu
     /// </summary>
-    public void returnToMenu() {
+    public void ReturnToMenu() {
         // Add implementation
     }
 
@@ -51,7 +51,7 @@ public class UIManager : MonoBehaviour
     /// Called whenever the "Volume" slider is adjusted within the pause menu
     /// </summary>
     /// <param name="volumeValue">New desired volume level on a scale of 0-100</param>
-    public void changeVolume(float volumeValue) {
+    public void ChangeVolume(float volumeValue) {
         // Add implementation
     }
 
@@ -59,7 +59,7 @@ public class UIManager : MonoBehaviour
     /// Called whenever the "SFX" slider is adjusted within the pause menu
     /// </summary>
     /// <param name="sfxValue">New desired Sound effects volume level on a scale of 0-100</param>
-    public void changeSFXVolume(float sfxValue) {
+    public void ChangeSFXVolume(float sfxValue) {
         // Add implementation
     }
 }

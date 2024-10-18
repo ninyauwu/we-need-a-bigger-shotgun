@@ -169,7 +169,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5986698861751815296}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: changeVolume
+        m_MethodName: ChangeVolume
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -390,7 +390,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5986698861751815296}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: changeSFXVolume
+        m_MethodName: ChangeSFXVolume
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1013,7 +1013,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5986698861751815296}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: closeSettings
+        m_MethodName: CloseSettings
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1662,7 +1662,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5986698861751815296}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: openPauseMenu
+        m_MethodName: OpenPauseMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1929,7 +1929,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5986698861751815296}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: closePauseMenu
+        m_MethodName: ClosePauseMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2755,7 +2755,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5986698861751815296}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: openSettings
+        m_MethodName: OpenSettings
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3097,7 +3097,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5986698861751815296}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: returnToMenu
+        m_MethodName: ReturnToMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
