@@ -9,15 +9,13 @@ public class PlayerController : MonoBehaviour
 {
     [HideInInspector]
     public Rigidbody Rigidbody;
+    [SerializeField]
+    private PlayerStats _baseStats;
+    [HideInInspector]
+    public PlayerStats Stats;
     public GameObject CameraFollowTarget;
-    public void OnAttack(InputValue value)
-    {
-        // Set the rigidbody velocity opposite the camera directions
-        Rigidbody.velocity -= CameraFollowTarget.transform.forward * 3.0F;
-    }
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         if (!TryGetComponent(out Rigidbody))
         {
@@ -27,5 +25,13 @@ public class PlayerController : MonoBehaviour
         {
             throw new NullReferenceException("PlayerController does not have CameraFollowTarget set.");
         }
+
+        Stats = (PlayerStats)_baseStats.Clone();
+    }
+
+    public void OnAttack(InputValue value)
+    {
+        // Set the rigidbody velocity opposite the camera directions
+        Rigidbody.velocity -= CameraFollowTarget.transform.forward * 3.0F;
     }
 }
