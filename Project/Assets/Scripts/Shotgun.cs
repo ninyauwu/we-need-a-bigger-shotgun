@@ -10,6 +10,11 @@ public class Shotgun : MonoBehaviour
     public int explosionForce = 0;
     public int explosionRadius = 0;
     public float reloadTime = 0.0f;
+
+    public AudioClip shotgunShot;
+    public AudioClip shotgunReload;
+
+
     private Timer _reloadTimer = new Timer();
 
     void Update(){
@@ -33,6 +38,8 @@ public class Shotgun : MonoBehaviour
             playerRigidbody.GetComponent<Rigidbody>().AddExplosionForce(explosionForce, explosionPosition.position, explosionRadius);
             _reloadTimer.Start(reloadTime);
             //No indicator of shooting so
+            SoundEffectManager.Instance.PlaySound(shotgunShot, explosionPosition, 1.0f);
+            SoundEffectManager.Instance.PlaySoundNoPitchDelayed(shotgunReload, explosionPosition, 1.0f, 1.0f);
             Debug.Log("Shot");
     }
 }
