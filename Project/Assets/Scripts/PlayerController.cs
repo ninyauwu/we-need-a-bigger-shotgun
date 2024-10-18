@@ -12,7 +12,16 @@ public class PlayerController : MonoBehaviour
     public Transform mainCamera;   
     public Transform playerModel;
     public Transform playerSpine;
+    [SerializeField]
+    private PlayerStats _baseStats;
+    [HideInInspector]
+    public PlayerStats Stats;
 
+    private void Awake()
+    {
+        Stats = (PlayerStats)_baseStats.Clone();
+    }
+    
     void Update(){
         playerModel.transform.rotation = Quaternion.Euler(0, cameraFollowTarget.transform.rotation.eulerAngles.y, 0);
         Quaternion lookRotation = Quaternion.LookRotation((mainCamera.position + mainCamera.forward * 10.0f) - playerSpine.position);
