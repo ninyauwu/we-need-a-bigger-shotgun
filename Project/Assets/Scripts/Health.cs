@@ -15,8 +15,15 @@ public class Health : MonoBehaviour
             _maxHealth = player.Stats.Health;
         }
         // TODO: Add a way to get the max health from the Enemy
-        
+
         _currentHealth = _maxHealth;
+    }
+
+    public void Heal(float healingAmount)
+    {
+        _currentHealth += healingAmount;
+
+        if (_currentHealth >= _maxHealth) _currentHealth = _maxHealth;
     }
 
     public void TakeDamage(float damageAmount)
